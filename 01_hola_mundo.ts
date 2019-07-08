@@ -1,5 +1,3 @@
 let msg: string;
-msg = 'Hola mundo';
-
-// tslint:disable-next-line: no-console
+msg = 'Hola amigo';
 console.log(msg);
