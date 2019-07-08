@@ -4,9 +4,6 @@
         "tslint:recommended"
     ],
     "jsRules": {},
-<<<<<<< HEAD
-    "rules": {},
-=======
     "rules": {
         
     "arrow-return-shorthand": true,
@@ -136,6 +133,5 @@
         "component-class-suffix": true,
         "directive-class-suffix": true    
     },
->>>>>>> 1198dbdcc91cb5422a3fd4a5f5296b389cae279d
     "rulesDirectory": []
 }
