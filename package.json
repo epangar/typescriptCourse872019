@@ -1,38 +1,36 @@
 {
-  "name": "typescript-8-12_6_2019",
+  "name": "ts_indra",
   "version": "1.0.0",
-  "description": "Curso de Typescript 8/7/2019",
+  "description": "Curso TS",
   "main": "index.js",
   "scripts": {
+    "start": "tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc_v": "tsc -v",
     "tslint_v": "tslint -v",
-    "start": "tsc -w",
     "ts-node": "ts-node"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/epangar/typescriptCourse872019.git"
+    "url": "git+https://github.com/IconoTraining/ts_indra.git"
   },
   "keywords": [
     "TypeScript",
     "TS",
     "JS"
   ],
-  "author": "",
+  "author": "Alejandro Cerezo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/epangar/typescriptCourse872019/issues"
+    "url": "https://github.com/IconoTraining/ts_indra/issues"
   },
-  "homepage": "https://github.com/epangar/typescriptCourse872019#readme",
+  "homepage": "https://github.com/IconoTraining/ts_indra#readme",
   "dependencies": {
-    "bootstrap": "^4.3.1",
-    "jquery": "^3.4.1",
-    "popper.js": "^1.15.0",
-    "tslint": "^5.18.0",
-    "typescript": "^3.5.2"
+    "bootstrap": "^4.3.1"
   },
   "devDependencies": {
-    "ts-node": "^8.3.0"
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.2"
   }
 }
