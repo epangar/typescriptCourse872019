@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Program",
             "program": "${workspaceFolder}/${fileBasename}",
-            "outFiles": ["${workspaceFolder}/dist/${fileBasenameNoExtension}.js"]
+            "outFiles": ["${workspaceFolder}/dist/**/*.js"]
         }
     ]
 }
