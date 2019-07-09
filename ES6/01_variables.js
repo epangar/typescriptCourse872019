@@ -6,72 +6,69 @@ var x
 let global = ''
 
 function algo() {
-  let local_function = ''
+
+  let localFuncion = ''
 
   {
-    let local_bloque = ''
+    let localBloque = ''
   }
 
 }
 
 const z = 9
-//z = 8
+// z = 8 DA error
 
-//Diferencia entre elementales y referenciales
-
+// Diferencia entre elementales y referencias
 'Pepe'
 23
 true
 undefined
-{ }
+ {}
 
-const o = {}
-o.nombre = 'Pepe'
+ const o = {}
+ o.nombre = 'Pepe'
 
-// Funciones por asignación
+ // Funciones por asignación
 
-const suma = function (a, b) { return a + b }
-console.log(suma(3, 5))
+ const suma = function(a,b) { return a+b }
+ console.log(suma(3,5))
 
-// Diferencia entre  elementales y referencias
+// Diferencia entre elemntales y referencias
 // en términos de mutabilidad / inmutabilidad
 
-const o1 = { nombre: 'Pepe' }
-const o2 = o1
+const o1 = {nombre: 'Pepe'}
+const o2 = o1 
 
 o2.nombre = 'Jose'
-
-console.log(o1, o2)
+console.log(o1)
 
 function inscribir(alumno) {
-  alumno.curso = 'TypeScript'
+  alumno.curso = 'Typescript'
 }
 
 inscribir(o1)
 console.log(o1)
-
 o1.nacim = new Date(2000, 12, 6)
-o1.dirección = {
-  ciudad: 'Cádiz'
+o1.direccion =  {
+  ciudad : 'Cádiz'
+}
+o1.saludar = function () {
+  console.log(`Hola, soy ${this.name}`)
 }
 
 function objetoIndependiente(obj) {
-
-  //clonado de objeto
+  // clonado de objetos no deep
   const r = Object.assign({}, obj)
-
+  // clonado de objetos deep
   // const r = JSON.parse(JSON.stringify(obj))
-  r.nombre = 'Gabriel'
-  r.cambios = 'Whatever'
+  r.nombre = 'Esnesto'
+  r.cambios = 'Lo que sea'
   return r
-
-
 }
-
-
 
 const oNuevo = objetoIndependiente(o1)
 
-oNuevo.dirección.ciudad = 'Málaga'
+oNuevo.direccion.ciudad = 'Malaga'
+oNuevo.nacim = new Date(oNuevo.nacim)
 console.log(o1)
 console.log(oNuevo)
