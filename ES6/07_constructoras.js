@@ -46,7 +46,14 @@ delete p2.edad
 console.log(p2.cerebro)
 p3.cerebro = false
 console.log(p3.cerebro)
-
 console.log(p2)
-
 console.log(p3)
+
+const aDatos = [1,2,3,4]
+console.log(Array.isArray(aDatos))
+
+/* 
+Array.prototype.push = () => console.log('Soy un array')
+aDatos.push(8)
+console.log(aDatos) 
+*/
