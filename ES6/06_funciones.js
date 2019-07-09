@@ -1,12 +1,23 @@
+// JS -> funcional
+// funcion === objeto
 
+// funciones anidadas
+// Patrón MODULE
 
-(() => {
+// Patrón IIAF
 
-	let app = 'Mi aplicación'
+// Closures
 
-	function presentar() {
-		console.log(app)
-	}
+const main = 
+    (() => {
 
-	return { presentar: presentar }
-})()
+        let app = 'Mi aplicación'
+
+        function presentar() {
+            console.log(app)   
+        }
+        
+        return {presentar: presentar}
+    })()    
+
+main.presentar()
