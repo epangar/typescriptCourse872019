@@ -45,3 +45,16 @@ Curso de TypeScrip para Indra (Minsait)
 - Depurar -> Inicia Depuración (Ejecutar archivo, F5)
 - Seleccionar entorno Node.JS
     (se crea en el proyecto .vscode/launch.json)
+
+## Elementos de ES6 ##
+
+- Datos y variables. Tipos debiles y dinámicos.
+- Ambito (scope). let / const
+- Constantes: mutabilidad de elementales / referencia
+- Clonación de objetos y arrays.
+- Funciones: asignación y declaración.
+- Arrow functions. Uso del this
+- Uso de parámetros por defcto.
+- Operadores rest y spread. Destructuring
+- Modulos. Diferencias entre Node (CommonJS) y ES6
+- Arrays. Formas de iteración. Bucle for-of en ES6
