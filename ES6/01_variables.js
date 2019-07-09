@@ -49,6 +49,8 @@ function inscribir(alumno) {
 
 inscribir(o1)
 console.log(o1)
+
+o1.nacim = new Date(2000, 12, 6)
 o1.dirección = {
   ciudad: 'Cádiz'
 }
@@ -56,7 +58,9 @@ o1.dirección = {
 function objetoIndependiente(obj) {
 
   //clonado de objeto
-  const r = JSON.parse(JSON.stringify(obj))
+  const r = Object.assign({}, obj)
+
+  // const r = JSON.parse(JSON.stringify(obj))
   r.nombre = 'Gabriel'
   r.cambios = 'Whatever'
   return r
@@ -64,6 +68,10 @@ function objetoIndependiente(obj) {
 
 }
 
+
+
 const oNuevo = objetoIndependiente(o1)
+
+oNuevo.dirección.ciudad = 'Málaga'
 console.log(o1)
 console.log(oNuevo)
