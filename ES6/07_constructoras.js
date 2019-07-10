@@ -34,6 +34,10 @@ Persona.prototype.saludar = function (otro = 'amigo') {
         console.log(`Hola ${otro}, soy ${this.nombre}`)
     }
 
+Persona.definir = function () {
+    console.log('¿Que es una persona?')
+}
+
 let p2 = new Persona('Pepe')
 let p3 = new Persona('Elena', 34)
 
@@ -41,6 +45,7 @@ console.log(p2 instanceof Persona)
 console.log(p2 instanceof Object)
 
 p2.saludar('Juan')
+Persona.definir()
 p2.trabajo = 'Programador'
 delete p2.edad
 console.log(p2.cerebro)
