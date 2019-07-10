@@ -18,20 +18,19 @@ import Persona from './06_persona';
 // 	}
 // }
 
-const p1 = new Persona('Pepe', 34)
-const p2 = new Persona('Elena', 28)
-let p3 = new Persona()
+const p1 = new Persona('Pepe', 34);
+const p2 = new Persona('Elena', 28);
+const p3 = new Persona();
 
-p1.saludar()
-p1.saludar(p2.nombre)
+p1.saludar();
+p1.saludar(p2.nombre);
 
-//p2.trabajo = 'Programadora'
+// p2.trabajo = 'Programadora'
 // delete p2.edad
 
-console.log(p1)
-console.log(p2)
-console.log(Persona.pensar())
-
+console.log(p1);
+console.log(p2);
+console.log(Persona.pensar());
 
 // class Alumno extends Persona {
 // 	curso: string;
@@ -46,5 +45,5 @@ console.log(Persona.pensar())
 // 	}
 // }
 
-let a1 = new Alumno('Carlos', 31, 'Angular');
-let a2 = new Alumno('Juan', 45, 'TS')
+const a1 = new Alumno('Carlos', 31, 'Angular');
+const a2 = new Alumno('Juan', 45, 'TS');

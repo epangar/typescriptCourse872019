@@ -37,7 +37,7 @@ const o2 = new mostrar()
 
 // Uso de metodos como handlers
 
-/* setTimeout(o.mostrar, 1000)
+setTimeout(o.mostrar, 1000)
 setTimeout(o.mostrar.bind(o), 2000) */
  
 console.clear()

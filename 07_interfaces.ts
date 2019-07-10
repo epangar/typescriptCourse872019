@@ -1,46 +1,47 @@
 abstract class Animal {
-	vivo: boolean;
-	constructor(public especie: string) {
-		this.vivo = true;
-	}
-	comer() {
-		console.log('Estoy comiendo')
-	}
+    vivo: boolean;
+    constructor(public especie: string) {
+        this.vivo = true;
+    }
+    comer() {
+        console.log('Estoy comiendo')
+    }
 }
 
 interface IFelino {
-	color: string;
-	uñas: boolean;
-	maullar: () => void;
+    color: string;
+    uñas: boolean;
+    maullar: () => void;
 }
 
+// tslint:disable-next-line: max-classes-per-file
 class Gato extends Animal implements IFelino {
 
-	constructor(especie: string, public color: string, public uñas: boolean) {
-		super(especie)
-	}
+    constructor(especie: string, public color: string , public uñas: boolean) {
+        super(especie)
+    }
 
-	maullar() {
-		console.log('Miau');
-		return true;
-	};
+    maullar() {
+        console.log('Miau');
+    }
 }
 
-let g = new Gato('gato', 'negro', true)
+let g = new Gato('gato', 'negro', true);
 
 let a: Animal;
-let f: IFelino;
 let g1: Gato;
+let f: IFelino;
 
 a = {
-	especie: '',
-	vivo: true,
-	comer() { console.log('Estoy comiendo') }
-}
+    especie: 'bicho',
+    vivo: true,
+    comer() {console.log('Estoy comiendo'); },
+};
 
 f = {
-	color: '',
-	uñas: true,
-	maullar() { },
-}
+    color: '',
+    uñas: true,
+    maullar() {},
+};
+
 console.log(a);
