@@ -1,11 +1,14 @@
 class Persona {
-	constructor(nombre = '', edad = 0){
+
+	constructor(nombre = '', edad = 0) {
 		console.log('Ha nacido una persona')
 		this.name = nombre;
-		this.edad=edad
+		this.edad = edad
 	}
-
-	saludar (otro = 'amigo'){
+	static pensar() {
+		console.log("Pienso...")
+	}
+	saludar(otro = 'amigo') {
 		console.log(`Hola,  ${otro}, soy ${nombre}. `)
 	}
 }
@@ -13,12 +16,12 @@ class Persona {
 
 
 class Alumno extends Persona {
-	constructor(nombre, edad, curso){
+	constructor(nombre, edad, curso) {
 		super(nombre, edad)
-		this.curso=curso;
+		this.curso = curso;
 	}
 
-	saludar(otro = 'amigo'){
+	saludar(otro = 'amigo') {
 		super.saludar(otro)
 		console.log(`Y estudio ${curso}`)
 	}
