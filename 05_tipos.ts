@@ -1,5 +1,4 @@
 {
-	// tslint:disable-next-line: indent
 	let cadena: string;
 	let numero: number;
 	let isOk: boolean;
@@ -19,7 +18,7 @@
 	const aDatos: any[] = [];
 	const aMasDatos: any[] = [];
 	const aNumber: number[] = [];
-	const aNumbers2: Array<number> = [];
+	const aNumbers2: number[] = [];
 
 	aDatos.push('Pepe', 67, false);
 	aMasDatos.push('Pepe', 67, false);
@@ -28,8 +27,16 @@
 
 }
 
+{
+	let aTupla: [number, number, number];
+
+}
 
 {
-	let aTupla: [number, number, number]
+	let oDatos: object;
+	oDatos = { nombre: 'Pepe' };
+}
+
+{
 	
 }
