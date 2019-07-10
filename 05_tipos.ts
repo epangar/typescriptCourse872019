@@ -30,7 +30,7 @@
 // tslint:disable-next-line: array-type
     const aNumbers2: Array<number> = [];
 
-    aDatos.push('Pepe', 87, true)
+    aDatos.push('Pepe', 87, true);
     aMasDatos.push('Pepe', 67, false);
     aNumbers1.push(1, 2, 3);
     aNumbers2.push(1, 2, 4);
@@ -38,7 +38,7 @@
 
 // Tuplas (Arrays de n items fijos)
 {
-    let aTupla: [number, number, number]
+    let aTupla: [number, number, number];
     aTupla = [1 , 3, 9];
 }
 

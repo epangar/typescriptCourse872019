@@ -1,7 +1,7 @@
-import Controller from './08_controller';
+import Controller from './08_Controller.js';
 
 (() => {
-	let a = new Controller();
-
-	console.log(a)
-})
+	document.addEventListener('DOMContentLoaded', () => {
+		const controller = new Controller();
+	});
+})();
