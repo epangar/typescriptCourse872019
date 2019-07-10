@@ -3,11 +3,9 @@ abstract class Animal {
 	constructor(public especie: string) {
 		this.vivo = true;
 	}
-
 	comer() {
 		console.log('Estoy comiendo')
 	}
-
 }
 
 interface IFelino {
@@ -27,3 +25,22 @@ class Gato extends Animal implements IFelino {
 		return true;
 	};
 }
+
+let g = new Gato('gato', 'negro', true)
+
+let a: Animal;
+let f: IFelino;
+let g1: Gato;
+
+a = {
+	especie: '',
+	vivo: true,
+	comer() { console.log('Estoy comiendo') }
+}
+
+f = {
+	color: '',
+	uñas: true,
+	maullar() { },
+}
+console.log(a);
