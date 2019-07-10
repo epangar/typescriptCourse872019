@@ -1,45 +1,49 @@
-import { PAISES } from './08_maestros';
+import { PAISES } from './08_maestros.js';
 
 interface INodos {
-	nombre: HTMLInputElement;
-	btnBorrar: HTMLButtonElement;
-	output: HTMLOutputElement;
+    nombre : HTMLInputElement
+    btnBorrar: HTMLButtonElement
+    output: HTMLOutputElement
+    paises: HTMLSelectElement
 }
 
 export default class Controller {
-	nodos: any;
-	paises: string[]
-	constructor() {
-		console.log('Cargado el controller');
-		this.nodos = {
-			nombre: document.querySelector('#nombre') as HTMLInputElement,
-			btnBorrar: document.querySelector('#btnBorrar'),
-			output: <HTMLOutputElement>document.querySelector('#output'),
-			paises: <HTMLSelectElement>document.querySelector('#paises'),
-		};
-		this.paises = PAISES;
+    nodos: INodos;
+    aPaises: Array<string>;
+    constructor() {
+        console.log('Cargado el controller')
+        this.nodos = { // aserción de tipos
+            nombre: document.querySelector('#nombre') as HTMLInputElement ,
+            btnBorrar: document.querySelector('#btnBorrar') as HTMLButtonElement,
+            output: <HTMLOutputElement>document.querySelector('#output'),
+            paises: <HTMLSelectElement>document.querySelector('#paises') 
+        }
+        this.aPaises = PAISES
 
-		let html = '';
-		this.paises.forEach((item) => {
-			html += `<option>${item}</option>`;
-		});
+        // Renderizado del DOM
+        let html = ''
+        this.aPaises.forEach(item => {
+            html += `<option>${item}</option>`
+        });
+        this.nodos.paises.innerHTML = html;
+        
+        // Manejadores de eventos
+        this.nodos.nombre.addEventListener('input',
+            this.onInput.bind(this) )
+        this.nodos.btnBorrar.addEventListener('click',
+            this.onClick.bind(this))
+    }
 
-		this.nodos.nombre.addEventListener('input',
-			this.onInput.bind(this));
-		this.nodos.btnBorrar.addEventListener('click',
-			this.onClick.bind(this));
-	}
+    onInput(ev: Event) {
+        if (!ev.target) {return false}
+        const target = ev.target as HTMLInputElement;
+        console.log(this);
+        console.dir(target);
+        this.nodos.output.innerHTML =`Hola ${target.value}`
+    }
 
-	onInput(ev: Event) {
-		if (!ev.target) { return false; }
-		const target = ev.target as HTMLInputElement;
-		console.log(this);
-		console.log(target);
-		this.nodos.output.innerHTML = `Hola, ${target.value}`;
-	}
-
-	onClick() {
-		this.nodos.nombre.value = '',
-			this.nodos.output.innerHTML = '';
-	}
+    onClick() {
+        this.nodos.nombre.value = ''
+        this.nodos.output.innerHTML = ''
+    }
 }

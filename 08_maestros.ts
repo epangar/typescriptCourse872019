@@ -1,3 +1,3 @@
 export const PAISES = [
-	'España', 'Francia', 'Italia',
+    'España', 'Francia', 'Italia', 'Begica'
 ];
