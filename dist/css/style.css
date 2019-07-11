@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+}
+
+header, footer {
+    min-height: 15vh;
+    background-color: brown;
+    color: bisque;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    min-height: 70vh;
+    margin: 3rem;
+}
+
+main div {
+    margin: 3rem;
+}
